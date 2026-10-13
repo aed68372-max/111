@@ -3,3 +3,4 @@
 @media print{thead{display:table-header-group;break-after:avoid}thead tr{break-after:avoid}pre{break-inside:avoid}td,th{overflow-wrap:anywhere}}
 @media print{body{line-height:1.6}h2{margin-top:24px}h3{margin-top:18px}th,td{padding:8px 10px}th:first-child{min-width:52px}p{margin:9px 0}pre{padding:12px;line-height:1.45;font-size:9pt}}
 @media print{p{orphans:3;widows:3;break-inside:avoid}}
+@media print{footer{margin-top:14px;padding-top:8px}table{font-size:8.8pt}th,td{padding:7px 9px}}

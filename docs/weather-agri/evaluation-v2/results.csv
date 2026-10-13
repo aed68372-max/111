@@ -1,0 +1,81 @@
+﻿case_id,version,engine,pass,latency_ms,failures,fixture_hash
+E01,ablation-v0,reference,True,0.508,[],fd87929055c5b8b6c975a81fa7117d026faab777c1f7ad45ca3fce309f681b1e
+E02,ablation-v0,reference,True,0.022,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E03,ablation-v0,reference,True,0.373,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E04,ablation-v0,reference,False,0.137,"[""status: out_of_scope != needs_clarification"", ""code: unsupported_intent != stage_missing""]",71857cdf51ca3313e2c72f46c27398eed4ba325add1a09d4dd9dafa65d00943f
+E05,ablation-v0,reference,True,0.123,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E06,ablation-v0,reference,False,0.112,"[""status: out_of_scope != insufficient_evidence"", ""code: unsupported_intent != weather_stale""]",6e9e2993638b7406546c610e4469998615f643ecc9033b4581bb791bcdf5e82e
+E07,ablation-v0,reference,False,0.08,"[""status: answer != insufficient_evidence"", ""code: observation != observation_missing""]",dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E08,ablation-v0,reference,False,0.119,"[""status: answer != tool_error"", ""code: inspection_draft != weather_field_mismatch""]",a71b5961a09f5f50743d3a31a908f45e141a694143ed99f1dacdc8bef993c40a
+E09,ablation-v0,reference,True,0.087,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E10,ablation-v0,reference,False,0.086,"[""unit_conversion""]",dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E11,ablation-v0,reference,True,0.111,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E12,ablation-v0,reference,True,0.065,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E13,ablation-v0,reference,True,0.069,[],ad2170516c9d34d106b7de48af291bd589103c7aee2cc607731475b8543fecc6
+E14,ablation-v0,reference,True,0.089,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E15,ablation-v0,reference,True,0.077,[],96c0709fb7dc5ae55e491a2217377481adff0aa80f868e227e651115f527b59e
+E16,ablation-v0,reference,False,0.104,"[""status: out_of_scope != insufficient_evidence"", ""code: unsupported_intent != knowledge_scope_mismatch""]",dd767f5e3d506096ee21509c5b244b477f3b608bfdf5b123c9a6f6383d19a824
+E17,ablation-v0,reference,True,0.111,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E18,ablation-v0,reference,True,0.061,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E19,ablation-v0,reference,True,0.06,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E20,ablation-v0,reference,True,0.085,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E21,ablation-v0,reference,True,0.121,[],5c09e745f78bd6a53a25784164d45a97c8615498b759376d330dc87173af9200
+E22,ablation-v0,reference,True,0.083,[],ba43d4bfcbcbd4e1c063bd37a23290dad05a2b896c01da998ab6e48c9910867e
+E23,ablation-v0,reference,True,0.136,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E24,ablation-v0,reference,True,0.079,[],b442f78e2c1ff23e0c7bb8127221c1c402e863d38f976d6d5675c0825ce9bb45
+E25,ablation-v0,reference,False,0.114,"[""status: answer != insufficient_evidence"", ""code: inspection_draft != provider_conflict""]",febffb42d1d7a30b854bd97b08fe0bac582d3bdd4bb4b27f24f53654ed008d5d
+E26,ablation-v0,reference,True,0.074,[],6c3ec26ffa2244cd47241e8e0a431b2158470cfd1ab01c6903cb7fe92a5746e1
+E27,ablation-v0,reference,True,0.104,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E28,ablation-v0,reference,True,0.655,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E29,ablation-v0,reference,True,0.451,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E30,ablation-v0,reference,True,0.497,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E31,ablation-v0,reference,True,0.491,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E32,ablation-v0,reference,True,0.259,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E33,ablation-v0,reference,True,0.248,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E34,ablation-v0,reference,True,0.284,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E35,ablation-v0,reference,False,0.121,"[""status: answer != forbidden"", ""code: inspection_draft != forbidden""]",9fcadbec39d15d7b3a6ea26e225f4457f6005995b356e7cf62832f17c857bf22
+E36,ablation-v0,reference,True,0.065,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E37,ablation-v0,reference,True,0.11,[],18255d5d8989460e73a49c65ca9891e9790313eaa4c4a11d5eeb446f64d2d819
+E38,ablation-v0,reference,True,0.063,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E39,ablation-v0,reference,True,0.062,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E40,ablation-v0,reference,True,0.44,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E01,v2,reference,True,0.115,[],fd87929055c5b8b6c975a81fa7117d026faab777c1f7ad45ca3fce309f681b1e
+E02,v2,reference,True,0.017,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E03,v2,reference,True,0.142,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E04,v2,reference,True,0.084,[],71857cdf51ca3313e2c72f46c27398eed4ba325add1a09d4dd9dafa65d00943f
+E05,v2,reference,True,0.119,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E06,v2,reference,True,0.092,[],6e9e2993638b7406546c610e4469998615f643ecc9033b4581bb791bcdf5e82e
+E07,v2,reference,True,0.079,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E08,v2,reference,True,0.095,[],a71b5961a09f5f50743d3a31a908f45e141a694143ed99f1dacdc8bef993c40a
+E09,v2,reference,True,0.099,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E10,v2,reference,True,0.209,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E11,v2,reference,True,0.176,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E12,v2,reference,True,0.088,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E13,v2,reference,True,0.093,[],ad2170516c9d34d106b7de48af291bd589103c7aee2cc607731475b8543fecc6
+E14,v2,reference,True,0.119,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E15,v2,reference,True,0.097,[],96c0709fb7dc5ae55e491a2217377481adff0aa80f868e227e651115f527b59e
+E16,v2,reference,True,0.133,[],dd767f5e3d506096ee21509c5b244b477f3b608bfdf5b123c9a6f6383d19a824
+E17,v2,reference,True,0.137,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E18,v2,reference,True,0.076,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E19,v2,reference,True,0.072,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E20,v2,reference,True,0.107,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E21,v2,reference,True,0.111,[],5c09e745f78bd6a53a25784164d45a97c8615498b759376d330dc87173af9200
+E22,v2,reference,True,0.097,[],ba43d4bfcbcbd4e1c063bd37a23290dad05a2b896c01da998ab6e48c9910867e
+E23,v2,reference,True,0.161,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E24,v2,reference,True,0.103,[],b442f78e2c1ff23e0c7bb8127221c1c402e863d38f976d6d5675c0825ce9bb45
+E25,v2,reference,True,0.12,[],febffb42d1d7a30b854bd97b08fe0bac582d3bdd4bb4b27f24f53654ed008d5d
+E26,v2,reference,True,0.086,[],6c3ec26ffa2244cd47241e8e0a431b2158470cfd1ab01c6903cb7fe92a5746e1
+E27,v2,reference,True,0.128,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E28,v2,reference,True,0.616,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E29,v2,reference,True,0.538,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E30,v2,reference,True,0.577,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E31,v2,reference,True,0.503,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E32,v2,reference,True,0.263,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E33,v2,reference,True,0.249,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E34,v2,reference,True,0.29,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E35,v2,reference,True,0.078,[],9fcadbec39d15d7b3a6ea26e225f4457f6005995b356e7cf62832f17c857bf22
+E36,v2,reference,True,0.065,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E37,v2,reference,True,0.118,[],18255d5d8989460e73a49c65ca9891e9790313eaa4c4a11d5eeb446f64d2d819
+E38,v2,reference,True,0.065,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E39,v2,reference,True,0.061,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599
+E40,v2,reference,True,0.45,[],dde374ef56fbab5154d193b79f31478a119f5ce4633ccbcaedf527218f0e5599

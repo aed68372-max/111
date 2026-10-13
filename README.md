@@ -1,23 +1,51 @@
-# 天气智农（企业端）
+# 天气智农 · 雅安玉米排水巡检 V2
 
-面向农场管理者的气象风险与农事管理项目，集中展示作物状态、环境指标、风险提示和通知。现有应用使用模拟数据；产品评审资料进一步定义了农事助手、人工确认任务和监测反馈流程。
+本期覆盖粮用玉米灌浆期强降雨前的排水巡检：资料补充 → 建议 → 人工复核 → 确认任务 → 修改/取消/逾期 → 执行反馈。
 
-## 产品资料
+- [PRD](docs/weather-agri/PRD.html) / [PDF](docs/weather-agri/PRD.pdf)
+- [原生可编辑Figma](https://www.figma.com/design/unJmyC3ffNLYfT4tMTOxYl)
+- [可运行网页](docs/weather-agri/prototype.html) / [交互规格](docs/weather-agri/interaction-spec.html)
+- [评测报告](docs/weather-agri/evaluation.html) / [40条具体输入](docs/weather-agri/evaluation-cases-v2.jsonl) / [运行记录](docs/weather-agri/evaluation-v2/v2-runs.jsonl)
 
-资料集中在 [docs/weather-agri](docs/weather-agri/README.md)，版本V1.1，日期2026-10-13。
+## 运行
 
-| 内容 | 文件 |
-| --- | --- |
-| PRD需求文档 | [PDF](docs/weather-agri/PRD.pdf) / [可编辑HTML](docs/weather-agri/PRD.html) |
-| 可点击交互原型 | [prototype.html](docs/weather-agri/prototype.html) |
-| 交互与设计规格 | [PDF](docs/weather-agri/interaction-spec.pdf) / [HTML](docs/weather-agri/interaction-spec.html) |
-| Agent效果评测报告 | [PDF](docs/weather-agri/evaluation.pdf) / [HTML](docs/weather-agri/evaluation.html) |
-| 40条测试用例 | [CSV](docs/weather-agri/evaluation-cases.csv) / [JSONL](docs/weather-agri/evaluation-cases.jsonl) |
-| 界面验收记录 | [19项界面检查](docs/weather-agri/verification.html) |
+需Python 3.10+，仅用标准库。在仓库根目录执行：
 
-![企业端概览](docs/weather-agri/previews/overview-desktop.png)
+```text
+python docs/weather-agri/agent/server.py
+python docs/weather-agri/agent/evaluate.py
+python docs/weather-agri/agent/test_backend.py
+```
 
-交互原型不依赖项目安装。下载完整资料目录后打开index.html即可体验。浏览器演示记录支持留存、导出与重置。原型助手采用场景脚本，真实模型与后端尚未接入；40条效果用例未执行，界面检查结果单独记录。
+本地下载包运行时把 docs/weather-agri/ 替换为当前目录。打开 http://127.0.0.1:8787/prototype.html，演示账号 admin / password。服务仅绑定127.0.0.1。默认数据保存在agent/data/，不提交到仓库；用--db指定独立测试库。会话和临时建议在服务重启后清空，任务与监测持久化。
+
+## 模型接入
+
+已实现Ollama及兼容接口适配；当前尚未配置真实模型。环境变量：
+
+|变量|含义|
+|---|---|
+|AGRI_PROVIDER|ollama 或 compatible|
+|AGRI_BASE_URL|Ollama例：http://127.0.0.1:11434；兼容服务填含/v1的地址|
+|AGRI_MODEL|支持工具调用的已安装/可用模型名称|
+|AGRI_API_KEY|兼容服务密钥，只在服务环境设置|
+|AGRI_DEMO_USER / AGRI_DEMO_PASSWORD|本地开发账号（见server.py实际变量配置）|
+
+配置后重新启动，在设置页选择模型模式。另存评测：
+
+```text
+python docs/weather-agri/agent/evaluate.py --engine model --output work/model-evaluation
+```
+
+模型负责只读工具规划，决策仍通过业务规则门控；不代表已评估自由文本质量。无配置会明确失败，不用参考流程冒充真实模型结果。
+
+## 本轮结果
+
+40/40规则契约通过；受控消融对照32/40（非历史线上版本）；25/25后端/模拟协议测试、17/17网页验证通过。Figma15个可编辑Frame、26条流程跳转。真实模型推理0次，农艺评审和田间试点尚未开展。预报、地块和规则适用资料均为合成示例。50mm/24h采用气象降水等级作候选巡检触发，不是玉米受害阈值。
+
+原始来源：[源码33cf9da](https://github.com/aed68372-max/111/tree/33cf9da8a82ee4253a962ebe75eb1e4d1fb8722a)。原React项目使用模拟数据，本地服务为本轮新增独立实现。
+
+## 原React应用
 
 ## 当前应用
 
@@ -59,6 +87,7 @@ docs/weather-agri/         产品、交互与测试资料
 
 React 18、TypeScript、Vite、React Router、Tailwind CSS、Recharts。
 
-## 后续研发
 
-按PRD接入真实气象与地块资料，完成服务端身份认证、监测保存、任务留痕、Agent工具调用及知识检索。上线判断以实际服务验收与运行记录为依据。
+## 后续接入
+
+本地验证服务已实现只读工具规划接口、任务/监测保存和审计。生产天气、农艺审签、多人权限、自动重评及真实模型评测仍待完成。

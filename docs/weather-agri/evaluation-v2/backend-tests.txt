@@ -1,0 +1,30 @@
+test_bad_arguments (__main__.ProviderTests.test_bad_arguments) ... ok
+test_compatible_tool_roundtrip (__main__.ProviderTests.test_compatible_tool_roundtrip) ... ok
+test_foreign_field (__main__.ProviderTests.test_foreign_field) ... ok
+test_http_error (__main__.ProviderTests.test_http_error) ... ok
+test_ollama_tool_roundtrip (__main__.ProviderTests.test_ollama_tool_roundtrip) ... ok
+test_skipped_evidence (__main__.ProviderTests.test_skipped_evidence) ... ok
+test_tool_loop_bounded (__main__.ProviderTests.test_tool_loop_bounded) ... ok
+test_write_tool_blocked (__main__.ProviderTests.test_write_tool_blocked) ... ok
+test_bad_login (__main__.ServerTests.test_bad_login) ... ok
+test_logout_revokes_session (__main__.ServerTests.test_logout_revokes_session) ... ok
+test_no_model_config_no_fake_result (__main__.ServerTests.test_no_model_config_no_fake_result) ... ok
+test_reference_chat_real_http (__main__.ServerTests.test_reference_chat_real_http) ... ok
+test_static_path_denied (__main__.ServerTests.test_static_path_denied) ... ok
+test_task_confirm_and_idempotency (__main__.ServerTests.test_task_confirm_and_idempotency) ... ok
+test_unauthenticated_tasks (__main__.ServerTests.test_unauthenticated_tasks) ... ok
+test_cross_farm_read (__main__.WorkflowTests.test_cross_farm_read) ... ok
+test_edit_preserves_snapshot (__main__.WorkflowTests.test_edit_preserves_snapshot) ... ok
+test_no_confirmation (__main__.WorkflowTests.test_no_confirmation) ... ok
+test_optimistic_conflict (__main__.WorkflowTests.test_optimistic_conflict) ... ok
+test_overdue_derived (__main__.WorkflowTests.test_overdue_derived) ... ok
+test_review_gate (__main__.WorkflowTests.test_review_gate) ... ok
+test_terminal_state_immutable (__main__.WorkflowTests.test_terminal_state_immutable) ... ok
+test_unknown_drainage_clarifies (__main__.WorkflowTests.test_unknown_drainage_clarifies) ... ok
+test_unknown_weather_time (__main__.WorkflowTests.test_unknown_weather_time) ... ok
+test_unsafe_site_has_no_actions (__main__.WorkflowTests.test_unsafe_site_has_no_actions) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 7.796s
+
+OK

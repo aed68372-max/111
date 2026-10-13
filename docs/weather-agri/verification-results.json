@@ -1,85 +1,75 @@
 {
-  "date": "2026-10-13",
-  "scope": "local-html-interaction",
-  "tests": 19,
-  "passed": 19,
-  "errors": [],
+  "version": "2.0",
+  "date": "2026-10-13T06:23:42.468Z",
   "results": [
     {
-      "name": "预警到任务再到完成反馈",
+      "name": "建议复核必填阻止直接创建",
       "status": "PASS"
     },
     {
-      "name": "任务刷新留存",
+      "name": "退回建议不创建任务",
       "status": "PASS"
     },
     {
-      "name": "监测范围校验与成功保存",
+      "name": "复核通过并保存依据快照",
       "status": "PASS"
     },
     {
-      "name": "降水区间校验",
+      "name": "修改任务必须说明且保留原依据",
       "status": "PASS"
     },
     {
-      "name": "超时输入保留及恢复保存",
+      "name": "逾期标记保留任务状态",
       "status": "PASS"
     },
     {
-      "name": "缺生育期澄清与编辑恢复",
+      "name": "执行反馈完整后才能完成",
       "status": "PASS"
     },
     {
-      "name": "地块不一致时澄清",
+      "name": "取消原因必填并留存",
       "status": "PASS"
     },
     {
-      "name": "助手状态:stale",
+      "name": "刷新保留完成记录",
       "status": "PASS"
     },
     {
-      "name": "助手状态:timeout",
+      "name": "390px无横向溢出",
       "status": "PASS"
     },
     {
-      "name": "助手状态:empty",
+      "name": "本地服务登录和错误提示",
       "status": "PASS"
     },
     {
-      "name": "通知检索和全部已读",
+      "name": "网页实际执行工具查询",
       "status": "PASS"
     },
     {
-      "name": "登录错误与成功",
+      "name": "网页确认任务写入数据库",
       "status": "PASS"
     },
     {
-      "name": "记录导出",
+      "name": "服务模式拒绝误重置数据库",
       "status": "PASS"
     },
     {
-      "name": "弹层键盘Esc关闭",
+      "name": "无模型配置不产生伪模型结果",
       "status": "PASS"
     },
     {
-      "name": "移动端页面无整体横向溢出",
+      "name": "监测通过服务端校验与保存",
       "status": "PASS"
     },
     {
-      "name": "index本地链接有效",
+      "name": "退出刷新重新登录读取已有任务",
       "status": "PASS"
     },
     {
-      "name": "PRD本地链接有效",
-      "status": "PASS"
-    },
-    {
-      "name": "interaction-spec本地链接有效",
-      "status": "PASS"
-    },
-    {
-      "name": "evaluation本地链接有效",
+      "name": "浏览器无未处理脚本错误",
       "status": "PASS"
     }
-  ]
+  ],
+  "errors": []
 }

@@ -1,30 +1,46 @@
-# 天气智农产品评审资料
+# 天气智农 · 雅安玉米排水巡检 V2
 
-企业端MVP · V1.1 · 2026-10-13
+本期覆盖粮用玉米灌浆期强降雨前的排水巡检：资料补充 → 建议 → 人工复核 → 确认任务 → 修改/取消/逾期 → 执行反馈。
 
-## 阅读入口
+- [PRD](PRD.html) / [PDF](PRD.pdf)
+- [原生可编辑Figma](https://www.figma.com/design/unJmyC3ffNLYfT4tMTOxYl)
+- [可运行网页](prototype.html) / [交互规格](interaction-spec.html)
+- [评测报告](evaluation.html) / [40条具体输入](evaluation-cases-v2.jsonl) / [运行记录](evaluation-v2/v2-runs.jsonl)
 
-- [需求文档PDF](PRD.pdf)：产品范围、功能契约、Agent协议和验收标准。
-- [交互规格PDF](interaction-spec.pdf)：页面、组件、状态和Figma/Axure重建规格。
-- [评测报告PDF](evaluation.pdf)：现有源码基线、指标口径与待测结果。
-- [40条用例CSV](evaluation-cases.csv) / [JSONL](evaluation-cases.jsonl)：产品与Agent测试输入。
-- [界面验收记录](verification.html)：19项本地浏览器检查全部通过。
+## 运行
 
-## 体验交互原型
+需Python 3.10+，仅用标准库。在仓库根目录执行：
 
-下载本目录全部文件，打开index.html，再进入prototype.html。无需联网或安装依赖。GitHub文件预览不会直接运行HTML。
+```text
+python docs/weather-agri/agent/server.py
+python docs/weather-agri/agent/evaluate.py
+python docs/weather-agri/agent/test_backend.py
+```
 
-推荐路线：概览 → 风险详情 → 农事助手 → 确认任务 → 执行反馈 → 监测填报。顶部状态控制可切换缺生育期、天气过期、服务超时与空数据场景。
+本地下载包运行时把 docs/weather-agri/ 替换为当前目录。打开 http://127.0.0.1:8787/prototype.html，演示账号 admin / password。服务仅绑定127.0.0.1。默认数据保存在agent/data/，不提交到仓库；用--db指定独立测试库。会话和临时建议在服务重启后清空，任务与监测持久化。
 
-演示账号：admin / password。任务、监测与生育期修改保存在浏览器本地，可导出JSON或在设置中重置。
+## 模型接入
 
+已实现Ollama及兼容接口适配；当前尚未配置真实模型。环境变量：
 
-## 预览
+|变量|含义|
+|---|---|
+|AGRI_PROVIDER|ollama 或 compatible|
+|AGRI_BASE_URL|Ollama例：http://127.0.0.1:11434；兼容服务填含/v1的地址|
+|AGRI_MODEL|支持工具调用的已安装/可用模型名称|
+|AGRI_API_KEY|兼容服务密钥，只在服务环境设置|
+|AGRI_DEMO_USER / AGRI_DEMO_PASSWORD|本地开发账号（见server.py实际变量配置）|
 
-![桌面概览](previews/overview-desktop.png)
+配置后重新启动，在设置页选择模型模式。另存评测：
 
-![助手交互](previews/assistant-desktop.png)
+```text
+python docs/weather-agri/agent/evaluate.py --engine model --output work/model-evaluation
+```
 
-## 文件
+模型负责只读工具规划，决策仍通过业务规则门控；不代表已评估自由文本质量。无配置会明确失败，不用参考流程冒充真实模型结果。
 
-index.html / PRD.html / prototype.html / interaction-spec.html / evaluation.html / verification.html / document.css / evaluation-cases.csv / evaluation-cases.jsonl / verification-results.json / previews/
+## 本轮结果
+
+40/40规则契约通过；受控消融对照32/40（非历史线上版本）；25/25后端/模拟协议测试、17/17网页验证通过。Figma15个可编辑Frame、26条流程跳转。真实模型推理0次，农艺评审和田间试点尚未开展。预报、地块和规则适用资料均为合成示例。50mm/24h采用气象降水等级作候选巡检触发，不是玉米受害阈值。
+
+原始来源：[源码33cf9da](https://github.com/aed68372-max/111/tree/33cf9da8a82ee4253a962ebe75eb1e4d1fb8722a)。原React项目使用模拟数据，本地服务为本轮新增独立实现。

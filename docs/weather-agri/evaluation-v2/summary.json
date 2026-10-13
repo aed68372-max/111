@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-13T06:17:26.033136+00:00",
+  "suite_hash": "19543dcf369ffcf83cd6df9de618f12cd876418a01ec5923917e5eb78b7e8251",
+  "environment": "Windows-11-10.0.26200-SP0",
+  "engine": "reference",
+  "model_requested": false,
+  "model_live": false,
+  "cases": 40,
+  "versions": {
+    "ablation-v0": {
+      "passed": 32,
+      "total": 40,
+      "failed_case_ids": [
+        "E04",
+        "E06",
+        "E07",
+        "E08",
+        "E10",
+        "E16",
+        "E25",
+        "E35"
+      ]
+    },
+    "v2": {
+      "passed": 40,
+      "total": 40,
+      "failed_case_ids": []
+    }
+  },
+  "scope": "tool and business contract checks; not agronomic correctness or model accuracy",
+  "completed_model_cases": 0
+}
