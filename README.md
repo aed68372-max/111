@@ -1,90 +1,64 @@
-# 智慧农业助手 - 企业级农场管理系统
+# 天气智农（企业端）
 
-![智慧农业助手](https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Smart%20agriculture%20dashboard%2C%20farm%20management%20system%2C%20data%20visualization%2C%20modern%20UI%2C%20professional%20design&sign=768c7911c7817685f1e02b6abc40bd28)
+面向农场管理者的气象风险与农事管理项目，集中展示作物状态、环境指标、风险提示和通知。现有应用使用模拟数据；产品评审资料进一步定义了农事助手、人工确认任务和监测反馈流程。
 
-## 项目介绍
+## 产品资料
 
-智慧农业助手是一款基于Coze实现的企业级农场管理系统，专为现代农业生产设计。该系统集成了作物监测、环境管理、气象预警和农事活动记录等功能，通过数据可视化和智能分析，帮助农场管理者做出更科学的决策，提高农业生产效率和资源利用率。
+资料集中在 [docs/weather-agri](docs/weather-agri/README.md)，版本V1.1，日期2026-10-13。
 
-## 功能特点
+| 内容 | 文件 |
+| --- | --- |
+| PRD需求文档 | [PDF](docs/weather-agri/PRD.pdf) / [可编辑HTML](docs/weather-agri/PRD.html) |
+| 可点击交互原型 | [prototype.html](docs/weather-agri/prototype.html) |
+| 交互与设计规格 | [PDF](docs/weather-agri/interaction-spec.pdf) / [HTML](docs/weather-agri/interaction-spec.html) |
+| Agent效果评测报告 | [PDF](docs/weather-agri/evaluation.pdf) / [HTML](docs/weather-agri/evaluation.html) |
+| 40条测试用例 | [CSV](docs/weather-agri/evaluation-cases.csv) / [JSONL](docs/weather-agri/evaluation-cases.jsonl) |
+| 界面验收记录 | [19项界面检查](docs/weather-agri/verification.html) |
 
-- **综合仪表盘**：实时展示农场关键指标，包括作物总数、健康率、预警信息和产量预估
-- **作物管理**：详细监测各类作物生长状态、健康状况和产量预测
-- **环境监测**：实时跟踪温度、湿度、光照等环境参数，提供趋势分析
-- **气象预警**：及时接收天气异常警报，包括降雨、虫害和极端温度预警
-- **农事活动记录**：记录和管理灌溉、施肥、病虫害防治等农业活动
-- **气候韧性分析**：评估农场对气候变化的适应能力，提供优化建议
+![企业端概览](docs/weather-agri/previews/overview-desktop.png)
 
-## 灵感来源
+交互原型不依赖项目安装。下载完整资料目录后打开index.html即可体验。浏览器演示记录支持留存、导出与重置。原型助手采用场景脚本，真实模型与后端尚未接入；40条效果用例未执行，界面检查结果单独记录。
 
-本项目基于Coze平台开发，旨在将人工智能技术与现代农业结合，通过智能化管理提升农业生产效率和可持续性。系统设计借鉴了当前智慧农业的最佳实践，提供直观易用的界面和强大的数据分析能力。
+## 当前应用
 
-## 安装与配置
+- 农场概览：作物数量、健康率、预警与产量示例。
+- 作物详情：生长阶段、健康状态和模拟趋势。
+- 气象展示：环境趋势、风险提示、云量与降水示例。
+- 监测填报：监测站点、因子、数值与附件表单；现有提交为前端演示。
+- 通知中心：类型筛选、搜索、已读状态与删除。
 
-### 前提条件
+## 本地运行
 
-- Node.js 18.0.0 或更高版本
-- pnpm 包管理器
+需要Node.js 18或更高版本及pnpm。
 
-### 安装步骤
-
-1. 克隆本仓库
 ```bash
-git clone https://github.com/aed68372-max/web.git
-cd web
-```
-
-2. 安装依赖
-```bash
+git clone https://github.com/aed68372-max/111.git
+cd 111
 pnpm install
-```
-
-3. 配置环境变量
-```bash
-cp .env.example .env
-```
-编辑.env文件，根据需要配置API密钥（当前系统使用模拟数据，可不配置真实API密钥）
-
-### 运行项目
-
-```bash
 pnpm dev
 ```
-项目将在 http://localhost:3000 启动
 
-## 使用说明
+访问http://localhost:3000，演示账号为admin / password。
 
-1. 使用演示账号登录系统：
-   - 用户名：admin
-   - 密码：password
+```bash
+pnpm build
+pnpm preview
+```
 
-2. 在仪表盘查看农场概况
-3. 浏览不同模块：作物管理、环境监测、气象预警等
-4. 查看数据分析图表和预警信息
-5. 记录和管理农事活动
+## 目录
 
-## 项目结构
-
-- `/src/components` - 可复用UI组件
-- `/src/pages` - 页面组件
-- `/src/lib` - 工具函数和模拟数据
-- `/src/contexts` - React上下文
-- `/src/hooks` - 自定义React钩子
+```text
+src/pages/                 页面
+src/components/Dashboard/  农场与气象组件
+src/lib/mockData.ts        模拟数据
+src/contexts/              前端登录上下文
+docs/weather-agri/         产品、交互与测试资料
+```
 
 ## 技术栈
 
-- React 18+
-- TypeScript
-- Tailwind CSS
-- Recharts 数据可视化
-- React Router 路由管理
+React 18、TypeScript、Vite、React Router、Tailwind CSS、Recharts。
 
-## 注意事项
+## 后续研发
 
-- 本系统默认使用模拟数据，无需配置真实API密钥即可体验所有功能
-- 如需连接真实传感器或API，请配置相应的环境变量
-- 系统设计遵循响应式原则，支持桌面和移动设备访问
-
-## 许可证
-
-本项目基于MIT许可证开源 - 详情参见LICENSE文件
+按PRD接入真实气象与地块资料，完成服务端身份认证、监测保存、任务留痕、Agent工具调用及知识检索。上线判断以实际服务验收与运行记录为依据。

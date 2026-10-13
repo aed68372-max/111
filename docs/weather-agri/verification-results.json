@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-13",
+  "scope": "local-html-interaction",
+  "tests": 19,
+  "passed": 19,
+  "errors": [],
+  "results": [
+    {
+      "name": "预警到任务再到完成反馈",
+      "status": "PASS"
+    },
+    {
+      "name": "任务刷新留存",
+      "status": "PASS"
+    },
+    {
+      "name": "监测范围校验与成功保存",
+      "status": "PASS"
+    },
+    {
+      "name": "降水区间校验",
+      "status": "PASS"
+    },
+    {
+      "name": "超时输入保留及恢复保存",
+      "status": "PASS"
+    },
+    {
+      "name": "缺生育期澄清与编辑恢复",
+      "status": "PASS"
+    },
+    {
+      "name": "地块不一致时澄清",
+      "status": "PASS"
+    },
+    {
+      "name": "助手状态:stale",
+      "status": "PASS"
+    },
+    {
+      "name": "助手状态:timeout",
+      "status": "PASS"
+    },
+    {
+      "name": "助手状态:empty",
+      "status": "PASS"
+    },
+    {
+      "name": "通知检索和全部已读",
+      "status": "PASS"
+    },
+    {
+      "name": "登录错误与成功",
+      "status": "PASS"
+    },
+    {
+      "name": "记录导出",
+      "status": "PASS"
+    },
+    {
+      "name": "弹层键盘Esc关闭",
+      "status": "PASS"
+    },
+    {
+      "name": "移动端页面无整体横向溢出",
+      "status": "PASS"
+    },
+    {
+      "name": "index本地链接有效",
+      "status": "PASS"
+    },
+    {
+      "name": "PRD本地链接有效",
+      "status": "PASS"
+    },
+    {
+      "name": "interaction-spec本地链接有效",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluation本地链接有效",
+      "status": "PASS"
+    }
+  ]
+}
